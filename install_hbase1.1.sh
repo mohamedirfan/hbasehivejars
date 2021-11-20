@@ -1,4 +1,5 @@
 #set -x
+echo "Starting hbase phoenix zookeeper installation"
 echo " Step 1 - Download/Extract the tarball -> HBase installation -> Zookeeper Installation -> Phoenix Installation "
 cd /home/hduser/install/
 wget https://archive.apache.org/dist/hbase/1.1.10/hbase-1.1.10-bin.tar.gz
