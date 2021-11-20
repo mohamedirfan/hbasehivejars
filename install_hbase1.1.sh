@@ -1,5 +1,4 @@
 #set -x
-echo "Starting hbase phoenix zookeeper installation"
 echo " Step 1 - Download/Extract the tarball -> HBase installation -> Zookeeper Installation -> Phoenix Installation "
 cd /home/hduser/install/
 wget https://archive.apache.org/dist/hbase/1.1.10/hbase-1.1.10-bin.tar.gz
@@ -50,8 +49,11 @@ cp /usr/local/hbase/lib/guava-12.0.1.jar /usr/local/hive/lib/
 cp /usr/local/hbase/lib/hbase-protocol-1.1.10.jar /usr/local/hive/lib/
 cp /usr/local/hbase/lib/hbase-server-1.1.10.jar /usr/local/hive/lib/
 cp /home/hduser/install/antlr-runtime-3.5.2.jar /usr/local/hive/lib/
-cp /home/hduser/install/phoenix-hive-4.11.0-HBase-1.1.jar /usr/local/hive/lib/
 cp /home/hduser/install/twill-discovery-api-0.14.0.jar /usr/local/hive/lib/
 cp /home/hduser/install/twill-zookeeper-0.14.0.jar /usr/local/hive/lib/
 
-cp hbasehivejars/hbase-site.xml /usr/local/hbase/conf/hbase-site.xml
+cd /home/hduser/install/
+wget https://repo1.maven.org/maven2/org/apache/phoenix/phoenix-hive/4.11.0-HBase-1.1/phoenix-hive-4.11.0-HBase-1.1.jar
+cp /home/hduser/install/phoenix-hive-4.11.0-HBase-1.1.jar /usr/local/hive/lib/
+
+cp /home/hduser/install/hbasehivejars/hbase-site.xml /usr/local/hbase/conf/hbase-site.xml
