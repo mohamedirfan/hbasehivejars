@@ -39,7 +39,7 @@ echo "Step 4 - Add the below line in hive-env.sh to locate hbase lib path as aux
 
 cd /usr/local/hive/conf/
 mv hive-env.sh.template hive-env.sh
-echo "export HIVE_AUX_JARS_PATH=/usr/local/hbase/lib" >> hive-env.sh
+echo "export HIVE_AUX_JARS_PATH=/usr/local/hbase/lib:/usr/local/hadoop/share/hadoop/common" >> hive-env.sh
 
 echo " Step 5 - Copy all dependencies for hbase and phoenix with hive integration "
 
